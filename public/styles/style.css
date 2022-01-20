@@ -3,6 +3,7 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  border-radius: .5rem;
 }
 
 html {
@@ -23,8 +24,9 @@ body {
 }
 
 .chat-websocket {
-  -webkit-box-shadow: .5rem .5rem 1rem gray;
-          box-shadow: .5rem .5rem 1rem gray;
+  margin-top: 3rem;
+  -webkit-box-shadow: 0.5rem 0.5rem 2rem gray;
+          box-shadow: 0.5rem 0.5rem 2rem gray;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -38,8 +40,19 @@ body {
   width: 40rem;
 }
 
+.chat-websocket .websocket-actions {
+  font-size: 1.2rem;
+}
+
+.chat-websocket .websocket-actions p {
+  margin: 1rem;
+  text-shadow: 0 0 1rempx #ff8a3cce;
+  -webkit-animation: neon 2s ease-in infinite forwards;
+          animation: neon 2s ease-in infinite forwards;
+}
+
 .chat-websocket .websocket-controls {
-  margin: .5rem;
+  margin: 0.5rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -50,8 +63,76 @@ body {
           flex-direction: column;
 }
 
-.chat-websocket .websocket-controls input, .chat-websocket .websocket-controls textarea {
-  padding: .5rem 2rem;
-  margin: .5rem;
+.chat-websocket .websocket-controls input,
+.chat-websocket .websocket-controls textarea {
+  border: 0.1rem solid grey;
+  padding: 0.5rem 2rem;
+  margin: 0.5rem;
+  resize: none;
+}
+
+.chat-websocket .websocket-messages {
+  margin: 1rem;
+  font-size: 1.6rem;
+}
+
+.chat-websocket .websocket-messages p {
+  margin-top: .5rem;
+  padding: .5rem 3rem;
+  -webkit-box-shadow: .1rem .1rem 1rem gray;
+          box-shadow: .1rem .1rem 1rem gray;
+}
+
+.chat-websocket .websocket-messages p span {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.messages-me {
+  margin-right: 2rem;
+  background-color: rgba(116, 160, 95, 0.589);
+}
+
+.messages-other {
+  margin-left: 2rem;
+  background-color: rgba(51, 141, 153, 0.493);
+}
+
+@-webkit-keyframes neon {
+  0% {
+    color: #1a1a1a;
+    text-shadow: #ff8a3cce;
+  }
+  20% {
+    color: #969696;
+    text-shadow: 0 0 1rem #ff8a3cce;
+    opacity: 50;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    color: #ff8a3cce;
+    text-shadow: 0 0 1rem #ff8a3cce;
+  }
+}
+
+@keyframes neon {
+  0% {
+    color: #1a1a1a;
+    text-shadow: #ff8a3cce;
+  }
+  20% {
+    color: #969696;
+    text-shadow: 0 0 1rem #ff8a3cce;
+    opacity: 50;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    color: #ff8a3cce;
+    text-shadow: 0 0 1rem #ff8a3cce;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,25 +1,80 @@
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.chat-websocket{
+.chat-websocket {
+    margin-top: 3rem;
+  .websocket-actions {
+    font-size: 1.2rem;
+    p {
+      margin: 1rem;
+      text-shadow: 0 0 1rempx #ff8a3cce;
+      animation: neon 2s ease-in infinite forwards;
+    }
+  }
 
-    box-shadow: .5rem .5rem 1rem gray;
+  box-shadow: 0.5rem 0.5rem 2rem gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40rem;
+  .websocket-controls {
+    margin: 0.5rem;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 40rem;
-    .websocket-controls{
-        margin: .5rem;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        input,textarea{
-            padding: .5rem 2rem;
-            margin: .5rem;
-        }
-
+    input,
+    textarea {
+      border: 0.1rem solid grey;
+      padding: 0.5rem 2rem;
+      margin: 0.5rem;
+      resize: none;
     }
+  }
+  .websocket-messages {
+      margin: 1rem;
+    font-size: 1.6rem;
+    p{
+        margin-top: .5rem;
+        padding: .5rem 3rem;
+        box-shadow: .1rem .1rem 1rem gray;
+      span {
+        font-style: italic;
+        font-weight: bold;
+        
+      }
+    }
+  }
+}
 
+.messages-me{
+    margin-right: 2rem;
+    background-color: rgba(116, 160, 95, 0.589);
+}
+.messages-other{
+    margin-left: 2rem;
+    background-color: rgba(51, 141, 153, 0.493);
+}
+
+@keyframes neon {
+  0% {
+    color: #1a1a1a;
+    text-shadow: #ff8a3cce;
+  }
+
+  20% {
+    color: #969696;
+    text-shadow: 0 0 1rem #ff8a3cce;
+    opacity: 50;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  100% {
+    color: #ff8a3cce;
+    text-shadow: 0 0 1rem #ff8a3cce;
+  }
 }
