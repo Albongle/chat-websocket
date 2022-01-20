@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.chat-websocket{
+
+    box-shadow: .5rem .5rem 1rem gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40rem;
+    .websocket-controls{
+        margin: .5rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        input,textarea{
+            padding: .5rem 2rem;
+            margin: .5rem;
+        }
+
+    }
+
+}
