@@ -1,19 +1,26 @@
 {
   "name": "chat-websockect",
   "version": "1.0.0",
-  "description": "",
+  "description": "Aplicación de chat en tiempo real utilizando WebSocket",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node .",
-    "dev" : "nodemon ."
+    "dev": "nodemon ."
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "chat",
+    "websocket",
+    "real-time"
+  ],
+  "author": "Alejandro Bongioanni <alejandro.bongioanni@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.2",
     "express-handlebars": "^6.0.2",
     "socket.io": "^4.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
   }
 }
